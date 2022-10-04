@@ -1,0 +1,246 @@
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+  background: var(--colorFondoPrincipal);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+}
+
+.cabecera > div {
+  width: 300px;
+  height: fit-content;
+}
+
+.cabecera > div > img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cabecera > ul {
+  display: flex;
+  list-style: none;
+  width: 260px;
+  justify-content: space-around;
+  font-size: 22px;
+}
+
+.cabecera > ul > li {
+  padding: 5px 7px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cabecera > ul > li:hover {
+  background: var(--colorPrincipal);
+  color: var(--colorTextoSecundario);
+}
+
+.secciones {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccionTitle {
+  font-size: var(--textoMediano);
+  text-align: center;
+  padding: 0 25px;
+  box-sizing: border-box;
+  margin: 45px 0;
+}
+
+.seccionHome {
+  background: url("https://drive.google.com/uc?export=view&id=1hdbzHhKNc0qn_SaDyJf7t7zJxVY2B0Ht");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 calc(50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccionHome > h1 {
+  font-size: var(--textoGrande);
+}
+
+.seccionHome > h3 {
+  color: var(--colorTextoSecundario);
+  background: var(--colorPrincipal);
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 0 25px;
+}
+
+.seccionTrabajos > center {
+  display: gird;
+  place-items: center;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.seccionTrabajos > center > ul {
+  text-align: left;
+  padding-left: 0;
+  margin: 19px 25px;
+  font-size: var(--textoPequeno);
+}
+
+.seccionTrabajos > center > ul > li {
+  margin-bottom: 15px;
+}
+
+.seccionAcerca > p {
+  max-width: 580px;
+  text-align: justify;
+  font-size: var(--textoPequeno);
+  line-height: 28px;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+/* lista de clientes */
+
+.listClientes {
+  display: flex;
+  min-width: 560px;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.listClientes > img {
+  width: 80px;
+  height: 80px;
+  margin-right: 25px;
+  border-radius: 3px;
+}
+
+.listClientesPar {
+  background: var(--colorPrincipal);
+  color: #fff;
+}
+
+#contactFloat {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: 100px;
+  background: var(--colorFondoPrincipal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 7px 18px;
+  border-radius: 3px;
+}
+
+#contactFloat > span {
+  cursor: pointer;
+}
+
+.contactFloatLabel {
+  display: none;
+  margin: 8px 0;
+  color: var(--colorTextoSecundario);
+  cursor: pointer;
+}
+
+@keyframes moveContactFloat {
+  from {
+    right: 30px;
+    bottom: 30px;
+    width: fit-content;
+    height: 114px;
+    background: var(--colorFondoPrincipal);
+  }
+
+  to {
+    width: 220px;
+    height: 300px;
+    right: calc(50% - 110px);
+    bottom: calc(50% - 150px);
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--colorPrincipal);
+    color: var(--colorTextoSecundario);
+  }
+}
+
+@keyframes moveContactFloatReverse {
+  from {
+    width: 220px;
+    height: 300px;
+    right: calc(50% - 110px);
+    bottom: calc(50% - 150px);
+    background: var(--colorFondoPrincipal);
+  }
+
+  to {
+    right: 30px;
+    bottom: 30px;
+    width: fit-content;
+    height: 114px;
+    background: var(--colorFondoPrincipal);
+  }
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  background: rgba(238, 238, 238, 0.331);
+  padding: 30px 25px 0 25px;
+  box-sizing: border-box;
+}
+
+.footer > h6 {
+  margin: 0 0 15px 0;
+}
+
+@media (max-width: 940px) {
+  .secciones {
+    min-height: 70vh;
+  }
+  .cabecera > div {
+    width: fit-content;
+  }
+
+  .cabecera > div > img {
+    width: 100px;
+  }
+
+  .cabecera > ul {
+    font-size: var(--textoPequeno);
+    width: fit-content;
+  }
+
+
+  .seccionHome > h1 {
+    font-size: var(--textoMediano);
+  }
+  .seccionHome > h3 {
+    font-size: var(--textoPequeno);
+  }
+
+  .seccionTrabajos > center > ul {
+    text-align: left;
+    padding-left: 0;
+    font-size: var(--textoPequeno);
+  }
+
+  .listClientes {
+    min-width: 300px;
+  }
+}
