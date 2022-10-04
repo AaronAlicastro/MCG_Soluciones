@@ -90,7 +90,7 @@ class App extends Component {
         </div>
 
         <div id="contactFloat" onClick={e => e.stopPropagation()}>
-          <a href="https://api.whatsapp.com/send?phone=3156861074" target="_BlANK">
+          <a href="https://api.whatsapp.com/send?phone=573156861074" target="_BlANK">
             <IconContext.Provider value={{ size: "2em" }}>
               <FaWhatsapp />
             </IconContext.Provider>
